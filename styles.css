@@ -225,7 +225,7 @@ p { margin: 0 0 1em; }
 
 /* ---------- Sections ---------- */
 
-section { padding: clamp(3.5rem, 8vw, 6rem) 0; }
+/* section { padding: clamp(3.5rem, 8vw, 6rem) 0; } */
 section.alt { background: var(--cream-dark); }
 
 .section-eyebrow {
@@ -367,8 +367,9 @@ section.alt { background: var(--cream-dark); }
 /* ---------- Page-specific (Finley, donate) ---------- */
 
 .page-hero {
+  margin-bottom: 3rem;
   background: var(--cream-dark);
-  padding: clamp(3rem, 7vw, 5rem) 0 clamp(2rem, 5vw, 3rem);
+  padding: clamp(2rem, 7vw, 3rem) 0 clamp(2rem, 5vw, 3rem);
   text-align: center;
 }
 .page-hero h1 { margin-bottom: 0.5rem; }
@@ -473,55 +474,53 @@ section.alt { background: var(--cream-dark); }
 
 /* ---------- Blog index ---------- */
 
-.year-section { margin-bottom: 3rem; }
+.year-section { margin-bottom: 1.25rem; }
 .year-section:last-child { margin-bottom: 0; }
 .year-heading {
   font-family: var(--font-serif);
-  font-size: 2.4rem;
+  font-size: 1.5rem;
   color: var(--forest);
   font-weight: 400;
-  border-bottom: 2px solid var(--border);
-  padding-bottom: 0.5rem;
-  margin-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.25rem;
+  margin: 1.25rem 0 0.4rem;
   letter-spacing: -0.01em;
 }
+.year-section:first-of-type .year-heading { margin-top: 0; }
 
 .post-list { list-style: none; padding: 0; margin: 0; }
-.post-list__item { border-top: 1px solid var(--border); }
-.post-list__item:first-child { border-top: 0; }
 .post-list__item a {
   display: grid;
-  grid-template-columns: 90px 1fr;
-  gap: 1.25rem;
-  padding: 1rem 0.5rem;
+  grid-template-columns: 70px 1fr;
+  gap: 1rem;
+  padding: 0.4rem 0.5rem;
   text-decoration: none;
   color: var(--ink);
-  border-radius: 6px;
-  transition: background 0.15s ease;
+  border-radius: 4px;
+  align-items: baseline;
+  transition: background 0.12s ease;
 }
 .post-list__item a:hover { background: var(--cream-dark); }
+.post-list__item a:hover .post-list__title { color: var(--forest); }
 .post-list__date {
   font-family: var(--font-serif);
   font-style: italic;
   color: var(--muted);
-  font-size: 0.95rem;
-  padding-top: 0.15rem;
+  font-size: 0.9rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
 }
 .post-list__title {
   font-family: var(--font-serif);
-  font-size: 1.15rem;
-  color: var(--forest-dark);
-  margin-bottom: 0.2rem;
-  line-height: 1.3;
-}
-.post-list__excerpt {
-  color: var(--muted);
-  font-size: 0.95rem;
-  line-height: 1.5;
+  font-size: 1.05rem;
+  color: var(--ink);
+  line-height: 1.35;
+  transition: color 0.12s ease;
 }
 @media (max-width: 540px) {
-  .post-list__item a { grid-template-columns: 1fr; gap: 0.25rem; }
-  .post-list__date { font-size: 0.85rem; }
+  .post-list__item a { grid-template-columns: 56px 1fr; gap: 0.6rem; padding: 0.35rem 0.25rem; }
+  .post-list__date { font-size: 0.82rem; }
+  .post-list__title { font-size: 0.98rem; }
 }
 
 /* ---------- Blog post page ---------- */
