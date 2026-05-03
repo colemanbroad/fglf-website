@@ -3,3 +3,4 @@
 _scrape
 .claude
 *.zip
+dist/
