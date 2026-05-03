@@ -414,6 +414,34 @@ section.alt { background: var(--sage-tint); }
   padding: clamp(2rem, 7vw, 3rem) 0 clamp(2rem, 5vw, 3rem);
   text-align: center;
 }
+.page-hero--banner {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: clamp(5rem, 14vw, 9rem) 0 clamp(4rem, 10vw, 7rem);
+  color: var(--cream);
+  overflow: hidden;
+}
+.page-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(31,79,46,0.25) 0%, rgba(31,79,46,0.55) 100%);
+}
+.page-hero__content { position: relative; z-index: 1; }
+.page-hero--banner h1 { color: var(--cream); }
+.page-hero--banner .section-eyebrow {
+  color: var(--cream);
+  opacity: 0.92;
+}
+.page-hero--banner .section-eyebrow::before { color: var(--sage); }
+.page-hero--banner p:not(.section-eyebrow) {
+  color: var(--cream-dark);
+  text-shadow: 0 1px 12px rgba(31,79,46,0.55);
+  max-width: 600px;
+  margin: 0 auto;
+}
 .page-hero h1 { margin-bottom: 0.5rem; }
 .page-hero p { color: var(--muted); font-size: 1.15rem; max-width: 600px; margin: 0 auto; }
 
