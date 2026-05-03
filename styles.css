@@ -471,6 +471,81 @@ section.alt { background: var(--cream-dark); }
 .year-block__list strong { color: var(--forest-dark); font-weight: 600; font-family: var(--font-serif); font-size: 1.05rem; }
 .year-block__list .amount { color: var(--muted); font-variant-numeric: tabular-nums; }
 
+/* ---------- Blog index ---------- */
+
+.year-section { margin-bottom: 3rem; }
+.year-section:last-child { margin-bottom: 0; }
+.year-heading {
+  font-family: var(--font-serif);
+  font-size: 2.4rem;
+  color: var(--forest);
+  font-weight: 400;
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+.post-list { list-style: none; padding: 0; margin: 0; }
+.post-list__item { border-top: 1px solid var(--border); }
+.post-list__item:first-child { border-top: 0; }
+.post-list__item a {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 1.25rem;
+  padding: 1rem 0.5rem;
+  text-decoration: none;
+  color: var(--ink);
+  border-radius: 6px;
+  transition: background 0.15s ease;
+}
+.post-list__item a:hover { background: var(--cream-dark); }
+.post-list__date {
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--muted);
+  font-size: 0.95rem;
+  padding-top: 0.15rem;
+}
+.post-list__title {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  color: var(--forest-dark);
+  margin-bottom: 0.2rem;
+  line-height: 1.3;
+}
+.post-list__excerpt {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+@media (max-width: 540px) {
+  .post-list__item a { grid-template-columns: 1fr; gap: 0.25rem; }
+  .post-list__date { font-size: 0.85rem; }
+}
+
+/* ---------- Blog post page ---------- */
+
+.post-hero {
+  background: var(--cream-dark);
+  padding: clamp(3rem, 6vw, 4.5rem) 0 clamp(2rem, 4vw, 3rem);
+  border-bottom: 1px solid var(--border);
+}
+.post-hero h1 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  margin: 0;
+  color: var(--forest-dark);
+}
+.post-hero__date {
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--muted);
+  margin: 0 0 0.5rem;
+}
+.post-body { padding: 3rem 0 2rem; }
+.post-body img { border-radius: 10px; margin: 1.5rem 0; }
+.post-body p { margin-bottom: 1.25em; }
+
 /* ---------- Footer ---------- */
 
 .site-footer {
